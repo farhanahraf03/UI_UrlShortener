@@ -71,6 +71,11 @@ body{
     margin-left: 71.6%;
 }
 
+input{
+    font-size: 18px;
+    color: rgb(100, 94, 94);
+}
+
 input:focus{
     outline: none;
     font-size: 18px;

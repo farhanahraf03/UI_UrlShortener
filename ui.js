@@ -49,7 +49,7 @@ $(document).ready(function () {
 					console.log(data['body'])
 					$('#dataloading').css('display','none')
 					$('#shortURL').val('https://'+window.location.hostname +'/?url='+ parseInt(event.timeStamp).toString())
-					$('#shortURL').attr('disabled','true')
+					// $('#shortURL').attr('disabled','true')
 				},
 				error : function (err){
 					console.log("Error")

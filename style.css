@@ -74,6 +74,7 @@ body{
 input{
     font-size: 18px;
     color: rgb(100, 94, 94);
+    text-align: center;
 }
 
 input:focus{

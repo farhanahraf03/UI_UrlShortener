@@ -40,6 +40,7 @@ $(document).ready(function () {
 				document.getElementById("emptyError").innerHTML = "Please enter a URL :( ";
 				document.getElementById("cont1").style.height = "240px";
 				document.getElementById("loading").style.top = "165px";
+				document.getElementById("dataloading").style.top = "108px";
 				return;
 			}
 			

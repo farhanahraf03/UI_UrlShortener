@@ -1,0 +1,63 @@
+<html>
+
+    <head>
+        <title>URL Shortener</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="containerMain">
+
+            <div id="stickyHeading"><img src="./logos/logo.jpg" width="450px" height="100px" id="logo"><span id="stickyTitle">shorten your url</span></div>
+
+            <div id="cont1">
+               <div id="containerLongURL"><center> <input type="text" id="longURL" required placeholder="Enter the URL"></center></div>
+               <div id="containerShortURL" style="position: relative;">
+                   <center> <input type="text" id="shortURL"  value=""></center>
+                    <div id="containerURL" class="tooltip"><center><img src="./logos/url_purp.svg" width="40px" height="40px" id="url1" onclick="copyClipboard()" onmouseout="outFunc()"><span class="tooltiptext" id="myTooltip">Copy to clipboard</span></center></div>
+                </div>
+            </div>
+            <div id="cont2">
+                <img src="./logos/url_logo_white.jpg" width="200px" height="200px" id="img2" onclick="">
+                <img src="./logos/url_logo_purp.jpg" width="200px" height="200px" id="img1" onclick="">
+            </div>
+
+
+
+        </div>
+
+        <script>
+
+            function copyClipboard()
+            {
+                var copyText = document.getElementById("shortURL");
+
+                /* Select the text field */
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+                document.execCommand("copy");
+
+                // alert("Copied the text: " + copyText.value);
+
+                // document.getElementById("cont1").style.height = "250px";
+
+                var tooltip = document.getElementById("myTooltip");
+                tooltip.innerHTML = "Copied: " + copyText.value;
+
+            }
+
+            function outFunc() 
+            {
+                var tooltip = document.getElementById("myTooltip");
+                tooltip.innerHTML = "Copy to clipboard";
+            }
+
+        </script>
+
+    </body>
+
+</html>

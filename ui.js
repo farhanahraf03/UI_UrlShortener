@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
 	let searchParams = new URLSearchParams(window.location.search)
 
 	if (searchParams.has('url')){
@@ -31,6 +32,17 @@ $(document).ready(function () {
 
 	else{
 		$(".url_short").click(function(event){
+
+			let ip = document.getElementById("longURL").value;
+
+			if(ip == "")
+			{
+				document.getElementById("emptyError").innerHTML = "Please enter a URL :( ";
+				document.getElementById("cont1").style.height = "240px";
+				document.getElementById("loading").style.top = "165px";
+				return;
+			}
+			
 			console.log('event triggered')
 			$('#dataloading').css('display','')
 			$.ajax({

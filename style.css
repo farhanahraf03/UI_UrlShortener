@@ -172,3 +172,12 @@ input:focus{
     position: absolute;
     margin-left: 60px;
 }
+
+#emptyError{
+    font-size: 20px;
+    border: 0px;
+    margin: 0px;
+    color: white;
+    font-family: 'Bree Serif', serif;
+    font-weight: lighter;
+}

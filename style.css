@@ -161,3 +161,9 @@ input:focus{
     visibility: visible;
     opacity: 0.65;
 }
+
+#loading{
+    top:140px;
+    position: absolute;
+    margin-left: 60px;
+}

@@ -2,9 +2,12 @@
 
     <head>
         <title>URL Shortener</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+        <script type="text/javascript" src="ui.js"></script>
     </head>
 
     <body>
@@ -14,15 +17,24 @@
             <div id="stickyHeading"><img src="./logos/logo.jpg" width="450px" height="100px" id="logo"><span id="stickyTitle">shorten your url</span></div>
 
             <div id="cont1">
-               <div id="containerLongURL"><center> <input type="text" id="longURL" required placeholder="Enter the URL"></center></div>
+               <div id="containerLongURL">
+                    <center> 
+                        <input type="text" id="longURL" required placeholder="Enter the URL">
+
+                    </center>
+                </div>
+                 <center>
+                    <img src="./logos/ajax-loader.gif" id="dataloading" style="background: blue; position: absolute; top: 100px;display: none;">
+                </center>
                <div id="containerShortURL" style="position: relative;">
+
                    <center> <input type="text" id="shortURL"  value=""></center>
                     <div id="containerURL" class="tooltip"><center><img src="./logos/url_purp.svg" width="40px" height="40px" id="url1" onclick="copyClipboard()" onmouseout="outFunc()"><span class="tooltiptext" id="myTooltip">Copy to clipboard</span></center></div>
                 </div>
             </div>
             <div id="cont2">
-                <img src="./logos/url_logo_white.jpg" width="200px" height="200px" id="img2" onclick="">
-                <img src="./logos/url_logo_purp.jpg" width="200px" height="200px" id="img1" onclick="">
+                <img src="./logos/url_logo_white.jpg" width="200px" height="200px" id="img2" class="url_short">
+                <img src="./logos/url_logo_purp.jpg" width="200px" height="200px" id="img1" class="url_short">
             </div>
 
 

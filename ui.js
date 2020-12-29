@@ -61,8 +61,7 @@ $(document).ready(function () {
 					console.log("Success")
 					console.log(data['body'])
 					$('#dataloading').css('display','none')
-					$('#shortURL').val('https://'+window.location.hostname +'/?url='+ parseInt(event.timeStamp).toString())
-					// $('#shortURL').attr('disabled','true')
+					$('#shortURL').val(JSON.parse(data['body']))					
 				},
 				error : function (err){
 					console.log("Error")

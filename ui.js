@@ -4,7 +4,7 @@ $(document).ready(function () {
 	if (searchParams.has('url')){
 		
 		console.log('search event triggered')
-		window.stop()
+		$(document).empty();
 		$.ajax({
 			url: "https://78zb18i69h.execute-api.ap-south-1.amazonaws.com/db_dev/db-functions",
 			data: JSON.stringify({action:'search',short_url:'https://'+window.location.hostname + '/?url='+searchParams.get('url')}),
